@@ -13,22 +13,25 @@ a { color: #06c }
 
 header { width: 100%; margin:0; padding:0 }
 header > div { width:100%; color: #fff }
-header > div.info { background: #036; }
+header > div.info { background: #00274c; }
 header > div.titolo { background: #06c; }
 header > div > div { width: 1180px; margin: 0px auto; padding:0 }
 header div div p { margin:0;padding:5px 10px; font-size: 14pt }
-header div div h1 { margin:0;padding:20px 10px; font-size: 32pt; font-weight: 400 }
+header div div h1 { margin:0;padding:20px 10px; font-size: 30px; font-weight: 400; color: #fff }
 
 section { width: 1180px; margin:0 auto 40px; padding:0 }
 article { width: 890px; margin: 0 0 0 290; padding:0 }
 article p { margin: 5px 10px; padding:0; color: #333 }
 article p.nota { font-size: 14pt; color: #444 }
+article p.nota a.refn { font-weight: 600; }
 
-h2 { margin:30px 10px;padding:0; font-size: 32pt; font-weight: 400; color: #036 }
-h3 { margin:20px 10px;padding:0; font-size: 24pt; font-weight: 400; color: #036 }
+
+h2 { margin:30px 10px;padding:0; font-size: 40px; font-weight: 500; color: #1c2024 }
+h3 { margin:20px 10px;padding:0; font-size: 32px; font-weight: 600; color: #1c2024 }
+h4 { margin:20px 10px;padding:0; font-size: 24px; font-weight: 700; color: #1c2024 }
 
 a.bia { color: #fff }
-a.ref { font-size: 60%; vertical-align: super }
+a.ref { font-size: 60%; vertical-align: super; font-weight: 700 }
 
 hr { border:0; border-bottom: 1px solid #666; margin: 20px; padding:0 }
 
@@ -45,12 +48,12 @@ table td { padding: 2px 6px}
 
 .testo { color: #444; width:90%; margin: 20px 10px; border:0; border-bottom: 1px solid #888; font-family: "Pass A38"; }
 input.testo { font-size:32pt; }
-button { font-size:14pt; color: #fff; margin: 10px 0; padding: 6px 10px; border:none; font-family: "Pass A38"; background-color: #06c; border-radius: 8px; cursor: pointer; }
-button:hover { background-color: #036; }
+button { font-size:14pt; color: #fff; margin: 10px 0; padding: 6px 10px; border:none; font-family: "Pass A38"; font-weight: 600; background-color: #06c; border-radius: 8px; cursor: pointer; }
+button:hover { background-color: #00274c; }
 
-footer { padding:0; margin:0; width: 100%; background: #888; color: #fff }
+footer { padding:0; margin:0; width: 100%; background: #2e383d; color: #fff }
 footer > div { padding:20 0; margin:0 auto; width: 1180px }
-footer p { margin: 0 10px }
+footer p { margin: 0 10px; font-size: 18px }
 
 .feat { font-weight: 600 }
 .legg { font-weight: 200 }
@@ -77,7 +80,7 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 	<header>
 		<div class="info">
 			<div>
-				<p><a href="https://github.com/m-casanova/Pass-A38" class="bia">← Torna a Github</a></p>
+				<p><a href="https://github.com/m-casanova/Pass-A38" class="bia">← Github</a></p>
 			</div>
 		</div>
 		<div class="titolo">
@@ -212,11 +215,11 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 				</tr>
 			</table>
 			<p>Sempre in omaggio alla «Casa che rende folli», la caratteristica <b>'ss01'</b> permette di ottenere i numeri romani dei piani e degli sportelli (solo nell'intervallo 1-9999), mentre la caratteristica <b>'ss02'</b> permette di mostrare le frecce per orientarsi tra gli sportelli.</p>
-			<h3>Note</h3>
-			<p class="nota" id="ref-1"><a href="#nt-1">1.</a> <i><a href="https://github.com/ecm4u/Titillium" target="_blank">Titillium</a></i>, Github.</p>
-			<p class="nota" id="ref-2"><a href="#nt-2">2.</a> <i><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">Titillium Web</a></i>, Google Fonts.</p>
-			<p class="nota" id="ref-3"><a href="#nt-3">3.</a> G. Sinni, <i><a href="https://medium.com/designers-italia/un-carattere-per-l-identit%C3%A0-italiana-c704f3e4791d" target="_blank">Un carattere per l’identità italiana</a></i>, «Designers Italia», 18 gen. 2016.</p>
-			<p class="nota" id="ref-4"><a href="#nt-4">4.</a> Cfr. <i><a href="https://it.wikipedia.org/wiki/Le_12_fatiche_di_Asterix" target="_blank">Le 12 fatiche di Asterix</a></i>, Wikipedia.</a>
+			<h4>Note</h4>
+			<p class="nota" id="ref-1"><a class="refn" href="#nt-1">1]</a> <i><a href="https://github.com/ecm4u/Titillium" target="_blank">Titillium</a></i>, Github.</p>
+			<p class="nota" id="ref-2"><a class="refn" href="#nt-2">2]</a> <i><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">Titillium Web</a></i>, Google Fonts.</p>
+			<p class="nota" id="ref-3"><a class="refn" href="#nt-3">3]</a> G. Sinni, <i><a href="https://medium.com/designers-italia/un-carattere-per-l-identit%C3%A0-italiana-c704f3e4791d" target="_blank">Un carattere per l’identità italiana</a></i>, «Designers Italia», 18 gen. 2016.</p>
+			<p class="nota" id="ref-4"><a class="refn" href="#nt-4">4]</a> Cfr. <i><a href="https://it.wikipedia.org/wiki/Le_12_fatiche_di_Asterix" target="_blank">Le 12 fatiche di Asterix</a></i>, Wikipedia.</a>
 		</article>
 	</section>
 	<footer>
