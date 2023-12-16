@@ -1,6 +1,6 @@
 # Pass A38
-
-Versione 1.0: versione iniziale.
+- Versione 1.15: sistemazione di alcuni caratteri
+- Versione 1.0: versione iniziale.
 
 Per maggiori informazioni e per testare il font, vedere la [pagina interattiva](https://m-casanova.github.io/Pass-A38/).
 
