@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 1.2: sistemazione di alcuni caratteri
 - Versione 1.15: sistemazione di alcuni caratteri
 - Versione 1.0: versione iniziale.
 
