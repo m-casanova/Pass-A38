@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.105: correzione simbolo ₹
 - Versione 2.102: risistemazione complessiva dei caratteri e aggiunta di alcune caratteristiche
 - Versione 1.2: sistemazione di alcuni caratteri
 - Versione 1.15: sistemazione di alcuni caratteri
