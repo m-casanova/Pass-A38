@@ -3,13 +3,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 @font-face {
-  font-family: "test"; font-weight: 200 700;
+  font-family: "test"; font-weight: 100 700;
   src: url("font/Pass_A38.woff2") format("woff2-variations");
 }
 body { font-family: "test"; font-size:16pt;margin:0;padding:0 }
 div { margin:0; padding:0; }
 
 a { color: #06c }
+
+i { font-variation-settings: "ital" 1; font-style:normal }
 
 header { width: 100%; margin:0; padding:0 }
 header > div { width:100%; color: #fff }
@@ -39,12 +41,18 @@ table { margin: 15px auto; padding:0; text-align:center; font-size: 16pt; border
 table th { border-bottom: 1px solid #666 }
 table td { padding: 2px 6px}
 
+blockquote { margin: 10px; padding: 6px 10px 6px 20px; border-left: 3px solid #bf3922 }
+
+.f1 { font-weight: 100 }
 .f2 { font-weight: 200 }
 .f3 { font-weight: 300 }
 .f4 { font-weight: 400 }
+.f5 { font-weight: 500 }
 .f6 { font-weight: 600 }
 .f7 { font-weight: 700 }
-.f9 { font-weight: 900; color: #888 }
+
+ul li::marker { font-family:'test'; color: #bf3922 }
+ol li::marker { font-family:'test'; color: #bf3922; font-feature-settings: 'ss04'; }
 
 .testo { color: #444; width:90%; margin: 20px 10px; border:0; border-bottom: 1px solid #888; font-family: "test"; }
 input.testo { font-size:32pt; }
@@ -55,6 +63,8 @@ footer { padding:0; margin:0; width: 100%; background: #2e383d; color: #fff }
 footer > div { padding:20 0; margin:0 auto; width: 1180px }
 footer p { margin: 0 10px; font-size: 18px }
 
+.rosso { color: #bf3922 }
+.fino { font-weight: 200 }
 .feat { font-weight: 600 }
 .legg { font-weight: 200 }
 .codice { color: #666; font-size: 12pt; text-align:left; border-bottom: 1px solid #666 }
@@ -65,6 +75,8 @@ footer p { margin: 0 10px; font-size: 18px }
 .vfrac { font-feature-settings: 'frac'; }
 .vss01 { font-feature-settings: 'ss01'; }
 .vss02 { font-feature-settings: 'ss02'; }
+.vss03 { font-feature-settings: 'ss03'; }
+.vss04 { font-feature-settings: 'ss04'; }
 
 div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
 
@@ -92,25 +104,32 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 
 	<section>
 		<div class="side">
-			<p>Una breve descrizione del font derivato da "Titillium Web"</p>
+			<p>Una breve descrizione del font derivato da <i>Titillium Web</i></p>
 		</div>
 		<article>
-			<h2>Un font variabile</h2>
+			<h2>Pass A38, un font variabile <span class="rosso fino">❦</span></h2>
 			<p>Utilizzare le barre di scorrimento per testare il font.</p>
 			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙßàèéìòù"/>
 			<p><i>Impostazioni:</i> <span id="dati"></span></p>
-			<p><b>wght (200...700):</b> <input id="range_wght" type="range" value="400" min="200" max="700" step="1" oninput="aggiorna('wght', this.value)"></p>
+			<p><b>wght (100...700):</b> <input id="range_wght" type="range" value="400" min="100" max="700" step="1" oninput="aggiorna('wght', this.value)"></p>
 			<p><b>ital (0...1)</b>: <input id="range_ital" type="range" value="0" min="0" max="1" step="1" oninput="aggiorna('ital', this.value)"></p>
 			<p><button onclick="reset()">Reimposta</button></p>
 
 			<h3>Descrizione</h3>
 			
-			<p>Il font "Titillium" è stato realizzato dall'Accademia di Belle Arti di Urbino e distribuito con licenza OFL 1.1<a class="ref" id="nt-1" href="#ref-1">[1]</a>; è ora distribuito via Google Fonts come "Titillium Web" in undici diverse versioni<a class="ref" id="nt-2" href="#ref-2">[2]</a>.</p>
+			<p>Il font <i>Titillium</i> è stato realizzato dall'Accademia di Belle Arti di Urbino e distribuito con licenza OFL 1.1<a class="ref" id="nt-1" href="#ref-1">[1]</a>; è ora distribuito via Google Fonts come <i>Titillium Web</i> in undici diverse versioni<a class="ref" id="nt-2" href="#ref-2">[2]</a>.</p>
+			<p>Il font variabile <i>Pass A38</i> è una derivazione del font <i>Titillium Web</i> (la lettera <i>l</i> minuscola è stata leggermente modificata per cercare di renderla facilmente distinguibile dalla <i>I</i> maiuscola).</p>
+			<p>Come mostra la tabella, il font <i>Pass A38</i> permette di simulare quasi tutte le varianti di <i>Titillium Web</i>; non è però disponibile la versione "Black" (cioè per weight=900) perché non esiste il corrispondente corsivo.</p>
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<th>Weight</th>
 					<th>Tondo</th>
 					<th>Corsivo</th>
+				</tr>
+				<tr class="f1">
+					<td>100</td>
+					<td>Thin</td>
+					<td><i>Thin Italic</i></td>
 				</tr>
 				<tr class="f2">
 					<td>200</td>
@@ -127,6 +146,11 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 					<td>Regular</td>
 					<td><i>Italic</i></td>
 				</tr>
+				<tr class="f5">
+					<td>500</td>
+					<td>Medium</td>
+					<td><i>Medium Italic</i></td>
+				</tr>
 				<tr class="f6">
 					<td>600</td>
 					<td>SemiBold</td>
@@ -137,15 +161,19 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 					<td>Bold</td>
 					<td><i>Bold Italic</i></td>
 				</tr>
-				<tr class="f9">
-					<td>900</td>
-					<td>Black</td>
-					<td>—</td>
-				</tr>
 			</table>
-			<p>Il font variabile "Pass A38" è una derivazione del font "Titillium Web" (la lettera <b>l</b> minuscola è stata leggermente modificata per cercare di renderla facilmente distinguibile dalla <b>I</b> maiuscola).</p>
-			<p>Come mostra la tabella, il font "Pass A38" permette di simulare quasi tutte le varianti di "Titillium Web" con un unico file in formato WOFF2; non è però disponibile la versione "Black" (cioè quando weight=900) perché non esiste il corrispondente corsivo.</p>
-			<p>Poiché il font "Titillium Web" è stato adottato per la pubblica amministrazione italiana<a class="ref" id="nt-3" href="#ref-3">[3]</a>, la scelta del nome "Pass A38" intende essere un omaggio all'ottava fatica di Asterix<a class="ref" id="nt-4" href="#ref-4">[4]</a> per ottenere il "lasciapassare A38" („Passierschein A38“ in tedesco) nella «Casa che rende folli».</p>
+			<p>Il font può essere caricato con un unico file in formato WOFF2 con il codice seguente.</p>
+			<blockquote>@font-face {<br/>
+			&nbsp; &nbsp; font-family: "Pass A38";<br/>
+			&nbsp; &nbsp; font-weight: 100 700;<br/>
+			&nbsp; &nbsp; src: url("Pass_A38.woff2") format("woff2-variations");<br/>
+			}</blockquote>
+			<p>Ovviamente deve essere adattando il percorso verso il file nei diversi casi.</p>
+			<p>Per ottenere correttamente il corsivo con Chrome, per il marcatore <i>i</i> utilizzare il seguente elemento.</p>
+			<blockquote>i { font-variation-settings: "ital" 1; font-style:normal }</blockquote>
+
+			<h3 id="nome">Nome</h3>
+			<p>Poiché il font <i>Titillium Web</i> è stato adottato per la pubblica amministrazione italiana<a class="ref" id="nt-3" href="#ref-3">[3]</a>, la scelta del nome <i>Pass A38</i> intende essere un omaggio all'ottava fatica di Asterix<a class="ref" id="nt-4" href="#ref-4">[4]</a> per ottenere il "lasciapassare A38" („Passierschein A38“ in tedesco) nella «Casa che rende folli».</p>
 
 			<h3 id="caratteristiche">Caratteristiche</h3>
 			<p>Il font è distribuito nei formati ttf e WOFF2 e sono supportate le seguenti caratteristiche.</p>
@@ -213,8 +241,49 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 				<tr>
 					<td colspan="4" class="codice">font-feature-settings: 'ss02';</td>
 				</tr>
+				<tr>
+					<td class="feat">'ss03'</td>
+					<td>1234567890</td>
+					<td class="legg">→</td>
+					<td class="vss03">1234567890</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'ss03';</td>
+				</tr>
 			</table>
 			<p>Sempre in omaggio alla «Casa che rende folli», la caratteristica <b>'ss01'</b> permette di ottenere i numeri romani dei piani e degli sportelli (solo nell'intervallo 1-9999), mentre la caratteristica <b>'ss02'</b> permette di mostrare le frecce per orientarsi tra gli sportelli.</p>
+
+			<h3 id="unicode">Elenco caratteri UNICODE</h3>
+			<p>! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ħ ħ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ľ ľ Ł ł Ń ń Ņ ņ Ň ň Ŋ ŋ Ō ō Ŏ ŏ Ő ő Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ŧ ŧ Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ſ Ǝ Ə ƒ Ǻ ǻ Ǽ ǽ Ǿ ǿ Ș ș Ț ț ȷ ˆ ˇ ˘ ˙ ˚ ˛ ˜ ˝ ̦ Δ Ω μ π ฿ Ẁ ẁ Ẃ ẃ Ẅ ẅ ẞ ẫ Ằ ễ ỗ Ỳ ỳ Ỹ ỹ – — ‖ ‘ ’ ‚ “ ” „ † ‡ • … ‰ ‹ › ⁂ ⁄ ⁋ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₦ ₪ € ₲ ₴ ₹ ₽ ™ Ω ← ↑ → ↓ ∂ ∆ ∏ ∑ − ∕ ∙ √ ∞ ∫ ≈ ≠ ≡ ≤ ≥ ■ □ ▪ ▫ ▲ △ ▶ ▷ ▼ ▽ ◀ ◁ ◆ ◇ ◊ ○ ● ◦ ◻ ◼ ❡ ❦ ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓ ⟦ ⟧ ⟨ ⟩ ⬛ ⬜ 🄌</p>
+			<p><i>! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ħ ħ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ľ ľ Ł ł Ń ń Ņ ņ Ň ň Ŋ ŋ Ō ō Ŏ ŏ Ő ő Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ŧ ŧ Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ſ Ǝ Ə ƒ Ǻ ǻ Ǽ ǽ Ǿ ǿ Ș ș Ț ț ȷ ˆ ˇ ˘ ˙ ˚ ˛ ˜ ˝ ̦ Δ Ω μ π ฿ Ẁ ẁ Ẃ ẃ Ẅ ẅ ẞ ẫ Ằ ễ ỗ Ỳ ỳ Ỹ ỹ – — ‖ ‘ ’ ‚ “ ” „ † ‡ • … ‰ ‹ › ⁂ ⁄ ⁋ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₦ ₪ € ₲ ₴ ₹ ₽ ™ Ω ← ↑ → ↓ ∂ ∆ ∏ ∑ − ∕ ∙ √ ∞ ∫ ≈ ≠ ≡ ≤ ≥ ■ □ ▪ ▫ ▲ △ ▶ ▷ ▼ ▽ ◀ ◁ ◆ ◇ ◊ ○ ● ◦ ◻ ◼ ❡ ❦ ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓ ⟦ ⟧ ⟨ ⟩ ⬛ ⬜ 🄌</i></p>
+
+			<h3 id="numeri">Numeri e tabelle</h3>
+			<p>Per facilitare gli allineamenti si sono considerati i caratteri numerici con spaziatura costante. Anche i caratteri relativi alle valute hanno la stessa spaziatura.</p>
+			<blockquote>|<span class="f1"> 12,34% <span class="vfrac">123/456</span> 123,45 $ </span>|<span class="f4"> 12,34% <span class="vfrac">123/456</span> 123,45 $ </span>|<span class="f7"> 12,34% <span class="vfrac">123/456</span> 123,45 $ </span>|<br/>
+			|<span class="f1"> 56,78% <span class="vfrac">234/567</span> 678,90 € </span>|<span class="f4"> 56,78% <span class="vfrac">234/567</span> 678,90 € </span>|<span class="f7"> 56,78% <span class="vfrac">234/567</span> 678,90 € </span>|<br/>
+			|<span class="f1"> 90,12% <span class="vfrac">345/678</span> 123,45 ₹ </span>|<span class="f4"> 90,12% <span class="vfrac">345/678</span> 123,45 ₹ </span>|<span class="f7"> 90,12% <span class="vfrac">345/678</span> 123,45 ₹ </span>|<br/>
+			|<span class="f1"> 34,56% <span class="vfrac">456/789</span> 678,90 ₪ </span>|<span class="f4"> 34,56% <span class="vfrac">456/789</span> 678,90 ₪ </span>|<span class="f7"> 34,56% <span class="vfrac">456/789</span> 678,90 ₪ </span>|<br/>
+			|<span class="f1"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|<span class="f4"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|<span class="f7"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|</blockquote>
+
+			<h3 id="elenchi">Simboli per elenchi</h3>
+			<p>Il font contiene vari simboli per elenchi puntati e permette di avere simboli adeguati per elenchi HTML con marcatore <i>ul</i>, tramite il codice seguente (testato con Firefox).</p>
+			<blockquote>ul li::marker { font-family: "Pass A38"; }</blockquote>
+			<p>Un esempio in cui è stato anche modificato il colore dei punti.</p>
+			<ul>
+				<li>Esempio di elemento di primo livello<ul>
+					<li>Esempio di elemento di secondo livello<ul>
+						<li>Esempio di elemento di terzo livello</li>
+					</li></ul>
+				</li></ul>
+			</ul>
+			<ul class="f1">
+				<li>Esempio di elemento di primo livello<ul>
+					<li>Esempio di elemento di secondo livello<ul>
+						<li>Esempio di elemento di terzo livello</li>
+					</li></ul>
+				</li></ul>
+			</ul>
+
 			<h4>Note</h4>
 			<p class="nota" id="ref-1"><a class="refn" href="#nt-1">1]</a> <i><a href="https://github.com/ecm4u/Titillium" target="_blank">Titillium</a></i>, Github.</p>
 			<p class="nota" id="ref-2"><a class="refn" href="#nt-2">2]</a> <i><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">Titillium Web</a></i>, Google Fonts.</p>
@@ -224,7 +293,7 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 	</section>
 	<footer>
 		<div>
-			<p>&copy; 2023 Michele Casanova
+			<p>&copy; 2023-2024 Michele Casanova
 		</div>
 	</footer>
 
