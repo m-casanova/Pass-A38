@@ -11,7 +11,7 @@ div { margin:0; padding:0; }
 
 a { color: #06c }
 
-i { font-variation-settings: "ital" 1; font-style:normal }
+em, i { font-variation-settings: "ital" 1; font-style:normal }
 
 header { width: 100%; margin:0; padding:0 }
 header > div { width:100%; color: #fff }
@@ -78,6 +78,37 @@ footer p { margin: 0 10px; font-size: 18px }
 .vss03 { font-feature-settings: 'ss03'; }
 .vss04 { font-feature-settings: 'ss04'; }
 
+.vario { text-align: center; font-size: 48px; animation: variabile 4000ms infinite both; }
+
+@keyframes variabile {
+	0% {
+		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
+	}
+	25% {
+		font-variation-settings: 'wght' 700, 'ital' 0; color: #bf3922;
+	}
+	49.9% {
+		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
+	}
+	50% {
+		font-variation-settings: 'wght' 100, 'ital' 1; color: #000;
+	}
+	75% {
+		font-variation-settings: 'wght' 700, 'ital' 1; color: #06c;
+	}
+	99.9% {
+		font-variation-settings: 'wght' 100, 'ital' 1; color: #000;
+	}
+	100% {
+		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
+	}
+}
+
+
+.vario:hover { animation-play-state: paused; }
+
+
+
 div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
 
 @media only screen and (max-width: 1200px) {
@@ -119,7 +150,8 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 			
 			<p>Il font <i>Titillium</i> è stato realizzato dall'Accademia di Belle Arti di Urbino e distribuito con licenza OFL 1.1<a class="ref" id="nt-1" href="#ref-1">[1]</a>; è ora distribuito via Google Fonts come <i>Titillium Web</i> in undici diverse versioni<a class="ref" id="nt-2" href="#ref-2">[2]</a>.</p>
 			<p>Il font variabile <i>Pass A38</i> è una derivazione del font <i>Titillium Web</i> (la lettera <i>l</i> minuscola è stata leggermente modificata per cercare di renderla facilmente distinguibile dalla <i>I</i> maiuscola).</p>
-			<p>Come mostra la tabella, il font <i>Pass A38</i> permette di simulare quasi tutte le varianti di <i>Titillium Web</i>; non è però disponibile la versione "Black" (cioè per weight=900) perché non esiste il corrispondente corsivo.</p>
+			<p class="vario">Pass A38 ❦ Variabile</p>
+			<p>Come mostra la tabella, il font <i>Pass A38</i> permette di riprodurre quasi tutte le varianti di <i>Titillium Web</i>; non è però disponibile la versione "Black" (cioè il caso con weight=900) perché non esiste il corrispondente corsivo.</p>
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<th>Weight</th>
@@ -162,18 +194,19 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 					<td><i>Bold Italic</i></td>
 				</tr>
 			</table>
-			<p>Il font può essere caricato con un unico file in formato WOFF2 con il codice seguente.</p>
+			<p>Il font può essere utilizzato tramite un unico file in formato WOFF2 con il seguente codice CSS.</p>
 			<blockquote>@font-face {<br/>
 			&nbsp; &nbsp; font-family: "Pass A38";<br/>
 			&nbsp; &nbsp; font-weight: 100 700;<br/>
 			&nbsp; &nbsp; src: url("Pass_A38.woff2") format("woff2-variations");<br/>
 			}</blockquote>
-			<p>Ovviamente deve essere adattando il percorso verso il file nei diversi casi.</p>
-			<p>Per ottenere correttamente il corsivo con Chrome, per il marcatore <i>i</i> utilizzare il seguente elemento.</p>
-			<blockquote>i { font-variation-settings: "ital" 1; font-style:normal }</blockquote>
+			<p>Ovviamente il percorso del file deve essere adattato alla specifica situazione.</p>
+			<p>Per ottenere correttamente il corsivo con Chrome e Opera, utilizzare il seguente codice CSS.</p>
+			<blockquote>em, i { font-variation-settings: "ital" 1; font-style:normal }</blockquote>
 
 			<h3 id="nome">Nome</h3>
-			<p>Poiché il font <i>Titillium Web</i> è stato adottato per la pubblica amministrazione italiana<a class="ref" id="nt-3" href="#ref-3">[3]</a>, la scelta del nome <i>Pass A38</i> intende essere un omaggio all'ottava fatica di Asterix<a class="ref" id="nt-4" href="#ref-4">[4]</a> per ottenere il "lasciapassare A38" („Passierschein A38“ in tedesco) nella «Casa che rende folli».</p>
+			<p>Il nome <i>Titillium</i> era un omaggio al compositore Arvo Pärt e alla sua tecnica <i>tintinnabuli</i><a class="ref" id="nt-3" href="#ref-3">[3]</a>.</p>
+			<p>Poiché il font <i>Titillium Web</i> è stato adottato per la pubblica amministrazione italiana<a class="ref" id="nt-4" href="#ref-4">[4]</a>, la scelta del nome <i>Pass A38</i> intende essere un omaggio all'ottava fatica di Asterix<a class="ref" id="nt-5" href="#ref-5">[5]</a> per ottenere il "lasciapassare A38" („Passierschein A38“ in tedesco) nella «Casa che rende folli».</p>
 
 			<h3 id="caratteristiche">Caratteristiche</h3>
 			<p>Il font è distribuito nei formati ttf e WOFF2 e sono supportate le seguenti caratteristiche.</p>
@@ -266,7 +299,7 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 			|<span class="f5"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|<span class="f6"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|<span class="f7"> 78,90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|</blockquote>
 
 			<h3 id="elenchi">Simboli per elenchi</h3>
-			<p>Il font contiene vari simboli per elenchi puntati e permette di avere simboli adeguati per elenchi HTML con marcatore <i>ul</i>, tramite il codice seguente (testato con Firefox).</p>
+			<p>Il font contiene vari simboli per elenchi puntati; possono essere utilizzati in elenchi con marcatore <i>ul</i> tramite il seguente codice CSS (si hanno risultati diversi con Firefox rispetto a Chrome o Opera).</p>
 			<blockquote>ul li::marker { font-family: "Pass A38"; }</blockquote>
 			<p>Un esempio in cui è stato anche modificato il colore dei punti.</p>
 			<ul>
@@ -287,8 +320,9 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 			<h4>Note</h4>
 			<p class="nota" id="ref-1"><a class="refn" href="#nt-1">1]</a> <i><a href="https://github.com/ecm4u/Titillium" target="_blank">Titillium</a></i>, Github.</p>
 			<p class="nota" id="ref-2"><a class="refn" href="#nt-2">2]</a> <i><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">Titillium Web</a></i>, Google Fonts.</p>
-			<p class="nota" id="ref-3"><a class="refn" href="#nt-3">3]</a> G. Sinni, <i><a href="https://medium.com/designers-italia/un-carattere-per-l-identit%C3%A0-italiana-c704f3e4791d" target="_blank">Un carattere per l’identità italiana</a></i>, «Designers Italia», 18 gen. 2016.</p>
-			<p class="nota" id="ref-4"><a class="refn" href="#nt-4">4]</a> Cfr. <i><a href="https://it.wikipedia.org/wiki/Le_12_fatiche_di_Asterix" target="_blank">Le 12 fatiche di Asterix</a></i>, Wikipedia.</a>
+			<p class="nota" id="ref-3"><a class="refn" href="#nt-3">3]</a> Cfr. <i><a href="http://nta.accademiadiurbino.it/titillium/" target="_blank">Titillium</a></i>, Accademia di Belle Arti di Urbino.</a>
+			<p class="nota" id="ref-4"><a class="refn" href="#nt-4">4]</a> G. Sinni, <i><a href="https://medium.com/designers-italia/un-carattere-per-l-identit%C3%A0-italiana-c704f3e4791d" target="_blank">Un carattere per l’identità italiana</a></i>, «Designers Italia», 18 gen. 2016.</p>
+			<p class="nota" id="ref-5"><a class="refn" href="#nt-5">5]</a> Cfr. <i><a href="https://it.wikipedia.org/wiki/Le_12_fatiche_di_Asterix" target="_blank">Le 12 fatiche di Asterix</a></i>, Wikipedia.</a>
 		</article>
 	</section>
 	<footer>
