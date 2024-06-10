@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.112: correzione simboli frecce e simbolo ‰
 - Versione 2.107: fix minori
 - Versione 2.105: correzione simbolo ₹
 - Versione 2.102: risistemazione complessiva dei caratteri e aggiunta di alcune caratteristiche
