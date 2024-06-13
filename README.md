@@ -11,6 +11,19 @@
 
 Per maggiori informazioni e per testare il font, vedere la [pagina interattiva](https://m-casanova.github.io/Pass-A38/).
 
+## Utilizzo
+Il font può essere utilizzato tramite un unico file in formato WOFF2 con il seguente codice CSS. Ovviamente il percorso del file deve essere adattato alla specifica situazione.
+
+    @font-face {
+        font-family: "Pass A38";
+        font-weight: 100 700;
+        src: url("Pass_A38.woff2") format("woff2-variations");
+    }
+
+Per ottenere correttamente il corsivo con Chrome e Opera, utilizzare il seguente codice CSS.
+
+    em, i { font-variation-settings: "ital" 1; font-style:normal }
+
 ## Descrizione
 ![image](Pass_A38.jpg)
 
@@ -19,5 +32,7 @@ _Pass A38_ ("Lasciapassare A38") è un font variabile derivato da _[Titillium We
 Il font è rilasciato nei formati WOFF2 e TTF con licenza OFL 1.1 (come già "Titillium Web").
 
 ![image](Pass_A38_b.jpg)
+
+## Opentype
 
 ![image](Pass_A38_c.jpg)
