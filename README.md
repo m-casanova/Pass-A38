@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.122: fix minori
 - Versione 2.119: fix diversi per frazioni e aggiunta ə Ə ɜ Ɜ
 - Versione 2.117: aggiunta legature
 - Versione 2.112: correzione simboli frecce e simbolo ‰
