@@ -28,9 +28,9 @@ article p.nota { font-size: 14pt; color: #444 }
 article p.nota a.refn { font-weight: 600; }
 
 
-h2 { margin:30px 10px;padding:0; font-size: 40px; font-weight: 500; color: #1c2024 }
-h3 { margin:20px 10px;padding:0; font-size: 32px; font-weight: 600; color: #1c2024 }
-h4 { margin:20px 10px;padding:0; font-size: 24px; font-weight: 700; color: #1c2024 }
+h2 { margin:30px 10px;padding:0; font-size: 40px; font-weight: 500; color: #bf3922 }
+h3 { margin:20px 10px;padding:0; font-size: 32px; font-weight: 600; color: #bf3922 }
+h4 { margin:20px 10px;padding:0; font-size: 24px; font-weight: 700; color: #bf3922 }
 
 a.bia { color: #fff }
 a.ref { font-size: 60%; vertical-align: super; font-weight: 700 }
@@ -79,35 +79,23 @@ footer p { margin: 0 10px; font-size: 18px }
 .vss04 { font-feature-settings: 'ss04'; }
 
 .vario { text-align: center; font-size: 48px; animation: variabile 4000ms infinite both; }
+.vario2 { text-align: center; font-size: 16pt; animation: variabile 4000ms infinite both; }
+
+.colonne { column-width: 7em; margin-top: 10px; margin-bottom: 10px; }
+.colonne ul { margin-top: 0; margin-bottom: 0 }
+.min { color: #888 }
 
 @keyframes variabile {
-	0% {
-		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
-	}
-	25% {
-		font-variation-settings: 'wght' 700, 'ital' 0; color: #bf3922;
-	}
-	49.9% {
-		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
-	}
-	50% {
-		font-variation-settings: 'wght' 100, 'ital' 1; color: #000;
-	}
-	75% {
-		font-variation-settings: 'wght' 700, 'ital' 1; color: #06c;
-	}
-	99.9% {
-		font-variation-settings: 'wght' 100, 'ital' 1; color: #000;
-	}
-	100% {
-		font-variation-settings: 'wght' 100, 'ital' 0; color: #000;
-	}
+	0%    { font-variation-settings: 'wght' 100, 'ital' 0; color: #000; }
+	25%   { font-variation-settings: 'wght' 700, 'ital' 0; color: #776d6b; }
+	49.9% { font-variation-settings: 'wght' 100, 'ital' 0; color: #000; }
+	50%   { font-variation-settings: 'wght' 100, 'ital' 1; color: #000; }
+	75%   { font-variation-settings: 'wght' 700, 'ital' 1; color: #776d6b; }
+	99.9% { font-variation-settings: 'wght' 100, 'ital' 1; color: #000; }
+	100%  { font-variation-settings: 'wght' 100, 'ital' 0; color: #000; }
 }
 
-
-.vario:hover { animation-play-state: paused; }
-
-
+.vario:hover, .vario2:hover { animation-play-state: paused; }
 
 div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
 
@@ -140,7 +128,7 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 		<article>
 			<h2>Pass A38, un font variabile <span class="rosso fino">❦</span></h2>
 			<p>Utilizzare le barre di scorrimento per testare il font.</p>
-			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙßàèéìòù"/>
+			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙßàèéìòù"/>
 			<p><i>Impostazioni:</i> <span id="dati"></span></p>
 			<p><b>wght (100...700):</b> <input id="range_wght" type="range" value="400" min="100" max="700" step="1" oninput="aggiorna('wght', this.value)"></p>
 			<p><b>ital (0...1)</b>: <input id="range_ital" type="range" value="0" min="0" max="1" step="1" oninput="aggiorna('ital', this.value)"></p>
@@ -289,6 +277,12 @@ div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; bor
 			<h3 id="unicode">Elenco caratteri UNICODE</h3>
 			<p>! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ħ ħ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ľ ľ Ł ł Ń ń Ņ ņ Ň ň Ŋ ŋ Ō ō Ŏ ŏ Ő ő Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ŧ ŧ Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ſ Ǝ Ə ƒ Ǻ ǻ Ǽ ǽ Ǿ ǿ Ș ș Ț ț ȷ ə ɜ ˆ ˇ ˘ ˙ ˚ ˛ ˜ ˝ ̦ Δ Ω μ π ฿ Ẁ ẁ Ẃ ẃ Ẅ ẅ ẞ ẫ Ằ ễ ỗ Ỳ ỳ Ỹ ỹ ‐ ‑ ‒ – — ‖ ‘ ’ ‚ “ ” „ † ‡ • … ‧ ‰ ‱ ′ ″ ‴ ‹ › ⁂ ⁄ ⁋ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₦ ₪ € ₲ ₴ ₹ ₽ ™ Ω ⅐ ⅑ ⅒ ⅓ ⅔ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅛ ⅜ ⅝ ⅞ ⅟ Ⅰ Ⅱ Ⅲ Ⅳ Ⅴ Ⅵ Ⅶ Ⅷ Ⅸ Ⅹ Ⅺ Ⅻ Ⅼ Ⅽ Ⅾ Ⅿ ↉ ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ∂ ∆ ∏ ∑ − ∕ ∙ √ ∞ ∫ ≈ ≠ ≡ ≤ ≥ ■ □ ▪ ▫ ▲ △ ▶ ▷ ▼ ▽ ◀ ◁ ◆ ◇ ◊ ○ ● ◦ ◻ ◼ ☙ ❡ ❦ ❧ ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓ ⟦ ⟧ ⟨ ⟩ ⬛ ⬜ Ɜ ﬀ ﬁ ﬂ ﬃ ﬄ 🄌</p>
 			<p><i>! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ħ ħ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ľ ľ Ł ł Ń ń Ņ ņ Ň ň Ŋ ŋ Ō ō Ŏ ŏ Ő ő Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ŧ ŧ Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ſ Ǝ Ə ƒ Ǻ ǻ Ǽ ǽ Ǿ ǿ Ș ș Ț ț ȷ ə ɜ ˆ ˇ ˘ ˙ ˚ ˛ ˜ ˝ ̦ Δ Ω μ π ฿ Ẁ ẁ Ẃ ẃ Ẅ ẅ ẞ ẫ Ằ ễ ỗ Ỳ ỳ Ỹ ỹ ‐ ‑ ‒ – — ‖ ‘ ’ ‚ “ ” „ † ‡ • … ‧ ‰ ‱ ′ ″ ‴ ‹ › ⁂ ⁄ ⁋ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₦ ₪ € ₲ ₴ ₹ ₽ ™ Ω ⅐ ⅑ ⅒ ⅓ ⅔ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅛ ⅜ ⅝ ⅞ ⅟ Ⅰ Ⅱ Ⅲ Ⅳ Ⅴ Ⅵ Ⅶ Ⅷ Ⅸ Ⅹ Ⅺ Ⅻ Ⅼ Ⅽ Ⅾ Ⅿ ↉ ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ∂ ∆ ∏ ∑ − ∕ ∙ √ ∞ ∫ ≈ ≠ ≡ ≤ ≥ ■ □ ▪ ▫ ▲ △ ▶ ▷ ▼ ▽ ◀ ◁ ◆ ◇ ◊ ○ ● ◦ ◻ ◼ ☙ ❡ ❦ ❧ ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓ ⟦ ⟧ ⟨ ⟩ ⬛ ⬜ Ɜ ﬀ ﬁ ﬂ ﬃ ﬄ 🄌</i></p>
+
+			<h3 id="icone">Elenco icone</h3>
+			<p>Dalla versione 2.507 sono presenti alcune icone tratte da <a href="https://github.com/italia/design-ui-kit" target="_blank">UI Kit Italia</a> (rilasciate con licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0 International</a>); sono state apportate alcune aggiunte e modifiche in modo da rendere le icone variabili e abbinabili al testo.</p>
+			<p class="vario2">utente - allegato - file - download</p>
+			<p>Elenco completo con codifica.</p>
+			<div class="colonne"><ul><li>&#xe000;&nbsp;<span class="min">&amp;#xe000;</span></li><li>&#xe001;&nbsp;<span class="min">&amp;#xe001;</span></li><li>&#xe002;&nbsp;<span class="min">&amp;#xe002;</span></li><li>&#xe003;&nbsp;<span class="min">&amp;#xe003;</span></li><li>&#xe004;&nbsp;<span class="min">&amp;#xe004;</span></li><li>&#xe005;&nbsp;<span class="min">&amp;#xe005;</span></li><li>&#xe006;&nbsp;<span class="min">&amp;#xe006;</span></li><li>&#xe007;&nbsp;<span class="min">&amp;#xe007;</span></li><li>&#xe008;&nbsp;<span class="min">&amp;#xe008;</span></li><li>&#xe009;&nbsp;<span class="min">&amp;#xe009;</span></li><li>&#xe00a;&nbsp;<span class="min">&amp;#xe00a;</span></li><li>&#xe00b;&nbsp;<span class="min">&amp;#xe00b;</span></li><li>&#xe00c;&nbsp;<span class="min">&amp;#xe00c;</span></li><li>&#xe00d;&nbsp;<span class="min">&amp;#xe00d;</span></li><li>&#xe00e;&nbsp;<span class="min">&amp;#xe00e;</span></li><li>&#xe00f;&nbsp;<span class="min">&amp;#xe00f;</span></li><li>&#xe010;&nbsp;<span class="min">&amp;#xe010;</span></li><li>&#xe011;&nbsp;<span class="min">&amp;#xe011;</span></li><li>&#xe020;&nbsp;<span class="min">&amp;#xe020;</span></li><li>&#xe021;&nbsp;<span class="min">&amp;#xe021;</span></li><li>&#xe080;&nbsp;<span class="min">&amp;#xe080;</span></li><li>&#xe081;&nbsp;<span class="min">&amp;#xe081;</span></li><li>&#xe082;&nbsp;<span class="min">&amp;#xe082;</span></li><li>&#xe083;&nbsp;<span class="min">&amp;#xe083;</span></li><li>&#xe0a0;&nbsp;<span class="min">&amp;#xe0a0;</span></li><li>&#xe0a1;&nbsp;<span class="min">&amp;#xe0a1;</span></li><li>&#xe0a2;&nbsp;<span class="min">&amp;#xe0a2;</span></li><li>&#xe0a3;&nbsp;<span class="min">&amp;#xe0a3;</span></li><li>&#xe0c0;&nbsp;<span class="min">&amp;#xe0c0;</span></li><li>&#xe0c1;&nbsp;<span class="min">&amp;#xe0c1;</span></li><li>&#xe0c2;&nbsp;<span class="min">&amp;#xe0c2;</span></li><li>&#xe100;&nbsp;<span class="min">&amp;#xe100;</span></li><li>&#xe101;&nbsp;<span class="min">&amp;#xe101;</span></li><li>&#xe102;&nbsp;<span class="min">&amp;#xe102;</span></li><li>&#xe103;&nbsp;<span class="min">&amp;#xe103;</span></li><li>&#xe104;&nbsp;<span class="min">&amp;#xe104;</span></li><li>&#xe105;&nbsp;<span class="min">&amp;#xe105;</span></li><li>&#xe106;&nbsp;<span class="min">&amp;#xe106;</span></li><li>&#xe107;&nbsp;<span class="min">&amp;#xe107;</span></li><li>&#xe108;&nbsp;<span class="min">&amp;#xe108;</span></li><li>&#xe10e;&nbsp;<span class="min">&amp;#xe10e;</span></li><li>&#xe10f;&nbsp;<span class="min">&amp;#xe10f;</span></li><li>&#xe110;&nbsp;<span class="min">&amp;#xe110;</span></li><li>&#xe120;&nbsp;<span class="min">&amp;#xe120;</span></li><li>&#xe140;&nbsp;<span class="min">&amp;#xe140;</span></li><li>&#xe141;&nbsp;<span class="min">&amp;#xe141;</span></li><li>&#xe142;&nbsp;<span class="min">&amp;#xe142;</span></li><li>&#xe143;&nbsp;<span class="min">&amp;#xe143;</span></li><li>&#xe144;&nbsp;<span class="min">&amp;#xe144;</span></li><li>&#xe145;&nbsp;<span class="min">&amp;#xe145;</span></li><li>&#xe148;&nbsp;<span class="min">&amp;#xe148;</span></li><li>&#xe149;&nbsp;<span class="min">&amp;#xe149;</span></li><li>&#xe14a;&nbsp;<span class="min">&amp;#xe14a;</span></li><li>&#xe14b;&nbsp;<span class="min">&amp;#xe14b;</span></li><li>&#xe14c;&nbsp;<span class="min">&amp;#xe14c;</span></li><li>&#xe14d;&nbsp;<span class="min">&amp;#xe14d;</span></li><li>&#xe160;&nbsp;<span class="min">&amp;#xe160;</span></li><li>&#xe161;&nbsp;<span class="min">&amp;#xe161;</span></li><li>&#xe162;&nbsp;<span class="min">&amp;#xe162;</span></li><li>&#xe163;&nbsp;<span class="min">&amp;#xe163;</span></li><li>&#xe164;&nbsp;<span class="min">&amp;#xe164;</span></li><li>&#xe165;&nbsp;<span class="min">&amp;#xe165;</span></li><li>&#xe166;&nbsp;<span class="min">&amp;#xe166;</span></li><li>&#xe167;&nbsp;<span class="min">&amp;#xe167;</span></li><li>&#xe168;&nbsp;<span class="min">&amp;#xe168;</span></li><li>&#xe16a;&nbsp;<span class="min">&amp;#xe16a;</span></li><li>&#xe16f;&nbsp;<span class="min">&amp;#xe16f;</span></li><li>&#xe200;&nbsp;<span class="min">&amp;#xe200;</span></li><li>&#xe201;&nbsp;<span class="min">&amp;#xe201;</span></li><li>&#xe202;&nbsp;<span class="min">&amp;#xe202;</span></li><li>&#xe203;&nbsp;<span class="min">&amp;#xe203;</span></li><li>&#xe204;&nbsp;<span class="min">&amp;#xe204;</span></li><li>&#xe205;&nbsp;<span class="min">&amp;#xe205;</span></li><li>&#xe206;&nbsp;<span class="min">&amp;#xe206;</span></li><li>&#xe207;&nbsp;<span class="min">&amp;#xe207;</span></li><li>&#xe208;&nbsp;<span class="min">&amp;#xe208;</span></li><li>&#xe240;&nbsp;<span class="min">&amp;#xe240;</span></li><li>&#xe241;&nbsp;<span class="min">&amp;#xe241;</span></li><li>&#xe242;&nbsp;<span class="min">&amp;#xe242;</span></li><li>&#xe300;&nbsp;<span class="min">&amp;#xe300;</span></li><li>&#xe301;&nbsp;<span class="min">&amp;#xe301;</span></li><li>&#xe302;&nbsp;<span class="min">&amp;#xe302;</span></li><li>&#xe303;&nbsp;<span class="min">&amp;#xe303;</span></li><li>&#xe304;&nbsp;<span class="min">&amp;#xe304;</span></li><li>&#xe305;&nbsp;<span class="min">&amp;#xe305;</span></li><li>&#xe306;&nbsp;<span class="min">&amp;#xe306;</span></li><li>&#xe307;&nbsp;<span class="min">&amp;#xe307;</span></li><li>&#xe308;&nbsp;<span class="min">&amp;#xe308;</span></li><li>&#xe309;&nbsp;<span class="min">&amp;#xe309;</span></li><li>&#xe30a;&nbsp;<span class="min">&amp;#xe30a;</span></li><li>&#xe30b;&nbsp;<span class="min">&amp;#xe30b;</span></li><li>&#xe30c;&nbsp;<span class="min">&amp;#xe30c;</span></li><li>&#xe30d;&nbsp;<span class="min">&amp;#xe30d;</span></li><li>&#xe30e;&nbsp;<span class="min">&amp;#xe30e;</span></li><li>&#xe30f;&nbsp;<span class="min">&amp;#xe30f;</span></li><li>&#xe310;&nbsp;<span class="min">&amp;#xe310;</span></li><li>&#xe311;&nbsp;<span class="min">&amp;#xe311;</span></li><li>&#xe312;&nbsp;<span class="min">&amp;#xe312;</span></li><li>&#xe320;&nbsp;<span class="min">&amp;#xe320;</span></li><li>&#xe340;&nbsp;<span class="min">&amp;#xe340;</span></li><li>&#xe3c0;&nbsp;<span class="min">&amp;#xe3c0;</span></li><li>&#xe3c1;&nbsp;<span class="min">&amp;#xe3c1;</span></li><li>&#xe3c2;&nbsp;<span class="min">&amp;#xe3c2;</span></li><li>&#xe3c3;&nbsp;<span class="min">&amp;#xe3c3;</span></li><li>&#xe3c4;&nbsp;<span class="min">&amp;#xe3c4;</span></li><li>&#xe3c5;&nbsp;<span class="min">&amp;#xe3c5;</span></li><li>&#xe3c6;&nbsp;<span class="min">&amp;#xe3c6;</span></li><li>&#xe3c7;&nbsp;<span class="min">&amp;#xe3c7;</span></li><li>&#xe3fd;&nbsp;<span class="min">&amp;#xe3fd;</span></li><li>&#xe3fe;&nbsp;<span class="min">&amp;#xe3fe;</span></li></ul></div>
 
 			<h3 id="numeri">Numeri e tabelle</h3>
 			<p>Per facilitare gli allineamenti si sono considerati i caratteri numerici con spaziatura costante. Anche i caratteri relativi alle valute hanno la stessa spaziatura.</p>
