@@ -1,11 +1,10 @@
-Copyright (c) 2009-2011 Accademia di Belle Arti di Urbino and students of MA course of Visual design. Some rights reserved ("Titillium" font - Open Font License)
-Copyright (c) 2018-2019 Team per la Trasformazione Digitale - Presidenza del Consiglio dei Ministri; (c) 2019-2024 Dipartimento per la trasformazione digitale - Presidenza del Consiglio dei Ministri (icons from UI Kit Italia v. 3.5.0 - Creative Commons Attribution 4.0 International)
-Additions and modifications (c) 2023-2024 Michele Casanova
-
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 
+Copyright (c) 2009-2011 Accademia di Belle Arti di Urbino and students of MA course of Visual design. Some rights reserved ("Titillium" font - Open Font License)
+Copyright (c) 2018-2019 Team per la Trasformazione Digitale - Presidenza del Consiglio dei Ministri; (c) 2019-2024 Dipartimento per la trasformazione digitale - Presidenza del Consiglio dei Ministri (icons from UI Kit Italia v. 3.5.0 - Creative Commons Attribution 4.0 International)
+Additions and modifications (c) 2023-2024 Michele Casanova
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
