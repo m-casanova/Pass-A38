@@ -1,5 +1,5 @@
 # Pass A38
-- Versione 2.507: aggiunta di icone da [UI Kit Italia](https://github.com/italia/design-ui-kit) con alcune aggiunte e modifiche; le icone sono rese con spessore variabile
+- Versione 2.507: incluse icone da [UI Kit Italia](https://github.com/italia/design-ui-kit) con alcune aggiunte e modifiche; le icone sono rese con spessore variabile
 - Versione 2.122: fix minori
 - Versione 2.119: fix diversi per frazioni e aggiunta ə Ə ɜ Ɜ
 - Versione 2.117: aggiunta legature
@@ -36,6 +36,12 @@ Dalla versione 2.507 sono inserite icone da [UI Kit Italia](https://github.com/i
 Il font è rilasciato nei formati WOFF2 e TTF con licenza OFL 1.1 (come già "Titillium Web").
 
 ![image](Pass_A38_b.jpg)
+
+## Icone variabili
+
+Le icone variabili hanno uno spessore che si adatta al testo corrispondente.
+
+![image](Pass_A38_d.jpg)
 
 ## Opentype
 
