@@ -27,7 +27,7 @@ Per ottenere correttamente il corsivo con Chrome e Opera, utilizzare il seguente
     em, i { font-variation-settings: "ital" 1; font-style:normal }
 
 ## Descrizione
-![image](Pass_A38.jpg)
+![image](images/Pass_A38.jpg)
 
 _Pass A38_ ("Lasciapassare A38") è un font variabile derivato da _[Titillium Web](https://fonts.google.com/specimen/Titillium+Web)_ dell'Accademia di Belle Arti di Urbino (con alcune modifiche); il font _Titillium Web_ è stato adottato per i siti della pubblica amministrazione in Italia.
 
@@ -35,14 +35,14 @@ Dalla versione 2.507 sono inserite icone da [UI Kit Italia](https://github.com/i
 
 Il font è rilasciato nei formati WOFF2 e TTF con licenza OFL 1.1 (come già "Titillium Web").
 
-![image](Pass_A38_b.jpg)
+![image](images/Pass_A38_b.jpg)
 
 ## Icone variabili
 
 Le icone variabili hanno uno spessore che si adatta al testo corrispondente.
 
-![image](Pass_A38_d.jpg)
+![image](images/Pass_A38_d.jpg)
 
 ## Opentype
 
-![image](Pass_A38_c.jpg)
+![image](images/Pass_A38_c.jpg)
