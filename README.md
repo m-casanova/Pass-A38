@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.509: aggiunta di altre icone
 - Versione 2.507: incluse icone da [UI Kit Italia](https://github.com/italia/design-ui-kit) con alcune aggiunte e modifiche; le icone sono rese con spessore variabile
 - Versione 2.122: fix minori
 - Versione 2.119: fix diversi per frazioni e aggiunta ə Ə ɜ Ɜ
