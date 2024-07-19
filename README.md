@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.511: fix minori
 - Versione 2.509: creazione di alcune icone aggiuntive
 - Versione 2.507: inclusione di icone da [UI Kit Italia](https://github.com/italia/design-ui-kit) con alcune modifiche (per avere uno spessore variabile) e alcune aggiunte
 - Versione 2.122: fix minori
