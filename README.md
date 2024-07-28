@@ -50,3 +50,5 @@ Le icone variabili hanno uno spessore che si adatta al testo corrispondente.
 ## Opentype
 
 ![image](images/Pass_A38_c.jpg)
+
+![image](images/Pass_A38_e.jpg)
