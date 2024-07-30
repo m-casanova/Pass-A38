@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.792: aggiunta di caratteri
 - Versione 2.761: aggiunta di caratteri
 - Versione 2.753+2.754: aggiunta dei capolettera come 'ss04', utilizzando le lettere estratte da _Titillium Display_ del progetto originario
 - Versione 2.742: aggiunta di caratteri e sistemazione accenti
