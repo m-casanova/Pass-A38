@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.812: fix crenatura e revisione asse 'weight'
 - Versione 2.795: fix minori
 - Versione 2.792: aggiunta di caratteri
 - Versione 2.761: aggiunta di caratteri
