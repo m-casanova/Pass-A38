@@ -1,4 +1,5 @@
 # Pass A38
+- Versione 2.816: fix minore
 - Versione 2.815: fix frazioni
 - Versione 2.812: fix crenatura e revisione asse 'weight'
 - Versione 2.795: fix minori
