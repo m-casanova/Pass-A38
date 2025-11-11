@@ -1,0 +1,415 @@
+<html>
+<title>"Pass A38" - A variable fork from "Titillium Web"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face {
+  font-family: "test"; font-weight: 100 700;
+  src: url("font/Pass_A38.woff2") format("woff2-variations");
+}
+body { font-family: "test"; font-size: 1.125rem; margin:0; padding:0 }
+div { margin:0; padding:0; }
+
+a { color: #06c }
+
+em, i { font-variation-settings: "ital" 1; font-style:normal }
+
+header { width: 100%; margin:0; padding:0 }
+header > div { width:100%; color: #fff }
+header > div.info { background: #0059b3; height: 48px }
+header > div.titolo { background: #06c; height: 104px }
+header > div > div { width: 1180px; margin: 0px auto; padding:0 }
+header div div p { margin:0; padding: 10px 10px; font-size: 14px }
+header div div h1 { margin:0;padding:20px 10px; font-size: 32px; font-weight: 400; color: #fff }
+
+section { width: 1180px; margin:0 auto 40px; padding:0 }
+article { width: 890px; margin: 0 0 0 290; padding:0 }
+article p, article p.capo { margin: 5px 10px; padding:0; color: #1a1a1a; line-height: 28px; font-size: 18px }
+article p.nota { font-size: 14pt; color: #444 }
+article p.nota a.refn { font-weight: 600; }
+
+p.capol:first-letter { font-feature-settings: 'ss04'; float: left; font-size: 6.5rem; padding: 0.1em 0.1em 0 0; color: #444; initial-letter: 3 }
+
+h2 { margin:30px 10px;padding:0; font-size: 40px; line-height: 1.4em; font-weight: 350; color: #bf3922 }
+h3 { margin:20px 10px;padding:0; font-size: 32px; line-height: 1.4em; font-weight: 550; color: #bf3922 }
+h4 { margin:20px 10px;padding:0; font-size: 28px; line-height: 1.4em; font-weight: 700; color: #bf3922 }
+
+a.bia { color: #fff; text-decoration: none; font-size: 14px }
+a.bia:hover { font-weight: 550 }
+a.ref { font-size: 75%; font-weight: 600; padding: 0 2px }
+a.ico { text-decoration: none }
+a.ico span { text-decoration: underline solid from-font }
+.inv0 { padding: 3px 6px; background-color: #eee; color: #000 }
+.inv1 { padding: 3px 6px; background-color: #036; color: #fff }
+.inv1 a { color: #fff }
+
+hr { border:0; border-bottom: 1px solid #666; margin: 20px; padding:0 }
+
+table { margin: 15px auto; padding:0; text-align:center; font-size: 1.125rem; border-top: 1px solid #666 }
+table th { border-bottom: 1px solid #666 }
+table td { padding: 2px 6px}
+
+blockquote { margin: 10px; padding: 6px 10px 6px 20px; border-left: 3px solid #bf3922 }
+
+.f1 { font-weight: 100 }
+.f2 { font-weight: 200 }
+.f3 { font-weight: 300 }
+.f4 { font-weight: 400 }
+.f5 { font-weight: 500 }
+.f6 { font-weight: 600 }
+.f7 { font-weight: 700 }
+
+ul li::marker { font-family:'test'; color: #bf3922 }
+ol li::marker { font-family:'test'; color: #bf3922; font-feature-settings: 'ss04'; }
+
+.testo { color: #444; width:90%; margin: 20px 10px; border:0; border-bottom: 1px solid #888; font-family: "test"; }
+input.testo { font-size:32pt; }
+input:focus { outline: none }
+button { font-size:14pt; color: #fff; margin: 10px 0; padding: 6px 10px; border:none; font-family: "test"; font-weight: 600; background-color: #06c; border-radius: 8px; cursor: pointer; }
+button:hover { background-color: #00274c; }
+
+footer { padding:0; margin:0; width: 100%; background: #2e383d; color: #fff }
+footer > div { padding:20 0; margin:0 auto; width: 1180px }
+footer p { margin: 0 10px; font-size: 18px }
+
+.rosso { color: #bf3922 }
+.fino { font-weight: 200 }
+.feat { font-weight: 600 }
+.legg { font-weight: 200 }
+.codice { color: #666; font-size: 12pt; text-align:left; border-bottom: 1px solid #666 }
+.vsups { font-feature-settings: 'sups'; }
+.vnumr { font-feature-settings: 'numr'; }
+.vdnom { font-feature-settings: 'dnom'; }
+.vsubs { font-feature-settings: 'subs'; }
+.vfrac { font-feature-settings: 'frac'; }
+.vss01 { font-feature-settings: 'ss01'; }
+.vss02 { font-feature-settings: 'ss02'; }
+.vss03 { font-feature-settings: 'ss03'; }
+.vss04 { font-feature-settings: 'ss04'; font-size: 48pt; line-height: 1.2em; color: #444 }
+
+.vario { text-align: center; font-size: 40px; line-height: 2em; animation: variabile 4000ms infinite both; }
+.vario:hover { animation-play-state: paused; }
+
+p.unicode, p.icone { font-size: 1.6rem; line-height: 2em; margin: 15px 10px }
+p.unicode span, p.icone span { color: #666; background: #eee; border-radius: 10px; padding: 1px; line-height: 1.5em; width: 1.5em; display: inline-block; text-align:center; border: 2px solid #eee  }
+p.unicode span:hover, p.icone span:hover { background: #fcfcfc; color: #000; border: 2px solid #06c }
+
+p.unicode span:hover { cursor: default; animation: variabile 4000ms infinite both; }
+p.icone span:hover { cursor:pointer; animation: variabile2 2000ms infinite both; }
+
+.min { color: #888 }
+
+@keyframes variabile {
+	0%    { font-variation-settings: 'wght' 100, 'ital' 0; }
+	25%   { font-variation-settings: 'wght' 700, 'ital' 0; }
+	49.9% { font-variation-settings: 'wght' 100, 'ital' 0; }
+	50%   { font-variation-settings: 'wght' 100, 'ital' 1; }
+	75%   { font-variation-settings: 'wght' 700, 'ital' 1; }
+	99.9% { font-variation-settings: 'wght' 100, 'ital' 1; }
+	100%  { font-variation-settings: 'wght' 100, 'ital' 0; }
+}
+@keyframes variabile2 {
+	0%    { font-variation-settings: 'wght' 100, 'ital' 0; }
+	50%   { font-variation-settings: 'wght' 700, 'ital' 0; }
+	100%  { font-variation-settings: 'wght' 100, 'ital' 0; }
+}
+
+div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
+
+#avviso { background-color: #8f8; padding: 5px; display: none }
+
+@media only screen and (max-width: 1200px) {
+ header > div > div { width: 100%; }
+ section { width: 100% }
+ article { width: 100%; margin: 0; }
+ footer > div { width: 100% }
+ div.side {display:none }
+}
+</style>
+<body>
+	<header>
+		<div class="info">
+			<div>
+				<p><a href="https://github.com/m-casanova/Pass-A38" class="bia">&#xE000; Github</a></p>
+			</div>
+		</div>
+		<div class="titolo">
+			<div>
+				<h1>Pass A38</h1>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="side">
+			<p>Una breve descrizione del font derivato da <i>Titillium Web</i></p>
+		</div>
+		<article>
+			<h2>Pass A38, un font variabile <span class="rosso fino">❦</span></h2>
+			<p>Utilizzare le barre di scorrimento per testare il font (come indicato dall'Accademia della Crusca, si utilizza il maschile<a class="ref" id="nt-1" href="#ref-1">[1]</a>).</p>
+			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙßàèéìòù"/>
+			<p><i>Impostazioni:</i> <span id="dati"></span></p>
+			<p><b>wght (100...700):</b> <input id="range_wght" type="range" value="400" min="100" max="700" step="1" oninput="aggiorna('wght', this.value)"></p>
+			<p><b>ital (0...1)</b>: <input id="range_ital" type="range" value="0" min="0" max="1" step="1" oninput="aggiorna('ital', this.value)"></p>
+			<p><button onclick="reset()">Reimposta</button></p>
+			
+			<h3>Descrizione</h3>
+			
+			<p class="capol"><i>Titillium</i> è un font realizzato dall'Accademia di Belle Arti di Urbino e distribuito con licenza OFL 1.1<a class="ref" id="nt-2" href="#ref-2">[2]</a>; è ora distribuito via Google Fonts come <i>Titillium Web</i> in undici diverse versioni<a class="ref" id="nt-3" href="#ref-3">[3]</a>.</p>
+			<p>Il font variabile <i>Pass A38</i> è una derivazione del font <i>Titillium Web</i> (la lettera <i>l</i> minuscola è stata leggermente modificata per cercare di renderla facilmente distinguibile dalla <i>I</i> maiuscola).</p>
+			<p class="vario">Pass A38 ❦ Variabile</p>
+			<p>Come mostra la tabella, il font <i>Pass A38</i> permette di riprodurre quasi tutte le varianti di <i>Titillium Web</i>; non è però disponibile la versione "Black" (cioè il caso con weight=900) perché non esiste il corrispondente corsivo.</p>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<th>Weight</th>
+					<th>Tondo</th>
+					<th>Corsivo</th>
+				</tr>
+				<tr class="f1">
+					<td>100</td>
+					<td>Thin</td>
+					<td><i>Thin Italic</i></td>
+				</tr>
+				<tr class="f2">
+					<td>200</td>
+					<td>ExtraLight</td>
+					<td><i>ExtraLight Italic</i></td>
+				</tr>
+				<tr class="f3">
+					<td>300</td>
+					<td>Light</td>
+					<td><i>Light Italic</i></td>
+				</tr>
+				<tr>
+					<td>400</td>
+					<td>Regular</td>
+					<td><i>Italic</i></td>
+				</tr>
+				<tr class="f5">
+					<td>500</td>
+					<td>Medium</td>
+					<td><i>Medium Italic</i></td>
+				</tr>
+				<tr class="f6">
+					<td>600</td>
+					<td>SemiBold</td>
+					<td><i>SemiBold Italic</i></td>
+				</tr>
+				<tr class="f7">
+					<td>700</td>
+					<td>Bold</td>
+					<td><i>Bold Italic</i></td>
+				</tr>
+			</table>
+			<p>Il font può essere utilizzato tramite un unico file in formato WOFF2 con il seguente codice CSS.</p>
+			<blockquote>@font-face {<br/>
+			&nbsp; &nbsp; font-family: "Pass A38";<br/>
+			&nbsp; &nbsp; font-weight: 100 700;<br/>
+			&nbsp; &nbsp; src: url("Pass_A38.woff2") format("woff2-variations");<br/>
+			}</blockquote>
+			<p>Ovviamente il percorso del file deve essere adattato alla specifica situazione.</p>
+			<p>Per ottenere correttamente il corsivo con Chrome e Opera, utilizzare il seguente codice CSS.</p>
+			<blockquote>em, i { font-variation-settings: "ital" 1; font-style:normal }</blockquote>
+
+			<h3 id="nome">Nome</h3>
+			<p>Il nome <i>Titillium</i> era un omaggio al compositore Arvo Pärt e alla sua tecnica <i>tintinnabuli</i><a class="ref" id="nt-4" href="#ref-4">[4]</a>.</p>
+			<p>Poiché il font <i>Titillium Web</i> è stato adottato per la pubblica amministrazione italiana<a class="ref" id="nt-5" href="#ref-5">[5]</a>, la scelta del nome <i>Pass A38</i> intende essere un omaggio all'ottava fatica di Asterix<a class="ref" id="nt-6" href="#ref-6">[6]</a> per ottenere il "lasciapassare A38" („Passierschein A38“ in tedesco) nella «Casa che rende folli».</p>
+
+			<h3 id="caratteristiche">Caratteristiche</h3>
+			<p>Il font è distribuito nei formati ttf e WOFF2 e sono supportate le seguenti caratteristiche.</p>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="feat">'sups'</td>
+					<td>A0123456789</td>
+					<td class="legg">→</td>
+					<td class="vsups">A0123456789</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'sups';</td>
+				</tr>
+				<tr>
+					<td class="feat">'numr'</td>
+					<td>A0123456789</td>
+					<td class="legg">→</td>
+					<td class="vnumr">A0123456789</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'numr';</td>
+				</tr>
+				<tr>
+					<td class="feat">'dnom'</td>
+					<td>A0123456789</td>
+					<td class="legg">→</td>
+					<td class="vdnom">A0123456789</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'dnom';</td>
+				</tr>
+				<tr>
+					<td class="feat">'subs'</td>
+					<td>A0123456789</td>
+					<td class="legg">→</td>
+					<td class="vsubs">A0123456789</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'subs';</td>
+				</tr>
+				<tr>
+					<td class="feat">'frac'</td>
+					<td>A12345/67890</td>
+					<td class="legg">→</td>
+					<td class="vfrac">A12345/67890</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'frac';</td>
+				</tr>
+				<tr>
+					<td class="feat">'ss01'</td>
+					<td>1234 38</td>
+					<td class="legg">→</td>
+					<td class="vss01">1234 38</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'ss01';</td>
+				</tr>
+				<tr>
+					<td class="feat">'ss02'</td>
+					<td><- -> ^ _</td>
+					<td class="legg">→</td>
+					<td class="vss02"><- -> ^ _</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'ss02';</td>
+				</tr>
+				<tr>
+					<td class="feat">'ss03'</td>
+					<td>1234567890</td>
+					<td class="legg">→</td>
+					<td class="vss03">1234567890</td>
+				<tr>
+				<tr>
+					<td colspan="4" class="codice">font-feature-settings: 'ss03';</td>
+				</tr>
+			</table>
+			<p>Sempre in omaggio alla «Casa che rende folli», la caratteristica <b>'ss01'</b> permette di ottenere i numeri romani dei piani e degli sportelli (solo nell'intervallo 1-9999), mentre la caratteristica <b>'ss02'</b> permette di mostrare le frecce per orientarsi tra gli sportelli.</p>
+			<p>Inoltre la caratteristica <b>'ss04'</b> permette di mostrare le lettere maiuscole A-Z previste nel font <em>Titillium Title</em> nel progetto originario e utilizzabili come capolettera. Non è previsto il corsivo.</p>
+			<p class="vss04">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+
+			<h3 id="numeri">Numeri e tabelle</h3>
+			<p>Per facilitare gli allineamenti si sono considerati i caratteri numerici con spaziatura costante. Anche i caratteri relativi alle valute hanno la stessa spaziatura.</p>
+			<blockquote>|<span class="f1"> 12.34% <span class="vfrac">123/456</span> 123,45 $ </span>|<span class="f2"> <i>12.34% <span class="vfrac">123/456</span> 123,45 $</i> </span>|<span class="f3"> 12.34% <span class="vfrac">123/456</span> 123,45 $ </span>|<br/>
+			|<span class="f2"> <i>56.78% <span class="vfrac">234/567</span> 678,90 €</i> </span>|<span class="f3"> 56.78% <span class="vfrac">234/567</span> 678,90 € </span>|<span class="f4"> <i>56.78% <span class="vfrac">234/567</span> 678,90 €</i> </span>|<br/>
+			|<span class="f3"> 90.12% <span class="vfrac">345/678</span> 123,45 ₹ </span>|<span class="f4"> <i>90.12% <span class="vfrac">345/678</span> 123,45 ₹</i> </span>|<span class="f5"> 90.12% <span class="vfrac">345/678</span> 123,45 ₹ </span>|<br/>
+			|<span class="f4"> <i>34.56% <span class="vfrac">456/789</span> 678,90 ₪</i> </span>|<span class="f5"> 34.56% <span class="vfrac">456/789</span> 678,90 ₪ </span>|<span class="f6"> <i>34.56% <span class="vfrac">456/789</span> 678,90 ₪</i> </span>|<br/>
+			|<span class="f5"> 78.90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|<span class="f6"> <i>78.90% <span class="vfrac">567/890</span> 123,45 ₴</i> </span>|<span class="f7"> 78.90% <span class="vfrac">567/890</span> 123,45 ₴ </span>|</blockquote>
+
+			<h3 id="elenchi">Simboli per elenchi</h3>
+			<p>Il font contiene vari simboli per elenchi puntati; possono essere utilizzati in elenchi con marcatore <i>ul</i> tramite il seguente codice CSS (si hanno risultati diversi con Firefox rispetto a Chrome o Opera).</p>
+			<blockquote>ul li::marker { font-family: "Pass A38"; }</blockquote>
+			<p>Segue un esempio in cui è stato anche modificato il colore dei punti.</p>
+			<ul>
+				<li>Esempio di elemento di primo livello
+					<ul>
+						<li>Esempio di elemento di secondo livello
+							<ul>
+								<li>Esempio di elemento di terzo livello</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="f1">
+				<li>Esempio di elemento di primo livello
+					<ul>
+						<li>Esempio di elemento di secondo livello
+							<ul>
+								<li>Esempio di elemento di terzo livello</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h3 id="icone">Icone</h3>
+			<p>Dalla versione 2.507 sono presenti alcune icone tratte da <a href="https://github.com/italia/design-ui-kit" target="_blank" class="ico"><span>UI Kit Italia</span>&#xe080;</a> (rilasciate con licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="ico"><span>CC BY 4.0 International</span>&#xe080;</a>); sono state apportate alcune modifiche (in modo da rendere le icone variabili e abbinabili al testo) e sono state create altre icone aggiuntive.</p>
+			<p>Passare con il mouse su un'icona per vedere l'animazione relativa alla variabilità (alcune non hanno variazione). Premere sull'icona per copiarne la codifica come carattere del font.</p>
+			<p class="icone"><span onclick="copia(this);">&#xe000;</span> <span onclick="copia(this);">&#xe001;</span> <span onclick="copia(this);">&#xe002;</span> <span onclick="copia(this);">&#xe003;</span> <span onclick="copia(this);">&#xe004;</span> <span onclick="copia(this);">&#xe005;</span> <span onclick="copia(this);">&#xe006;</span> <span onclick="copia(this);">&#xe007;</span> <span onclick="copia(this);">&#xe008;</span> <span onclick="copia(this);">&#xe009;</span> <span onclick="copia(this);">&#xe00a;</span> <span onclick="copia(this);">&#xe00b;</span> <span onclick="copia(this);">&#xe00c;</span> <span onclick="copia(this);">&#xe00d;</span> <span onclick="copia(this);">&#xe00e;</span> <span onclick="copia(this);">&#xe00f;</span> <span onclick="copia(this);">&#xe010;</span> <span onclick="copia(this);">&#xe011;</span> <span onclick="copia(this);">&#xe020;</span> <span onclick="copia(this);">&#xe021;</span> <span onclick="copia(this);">&#xe080;</span> <span onclick="copia(this);">&#xe081;</span> <span onclick="copia(this);">&#xe082;</span> <span onclick="copia(this);">&#xe083;</span> <span onclick="copia(this);">&#xe084;</span> <span onclick="copia(this);">&#xe0a0;</span> <span onclick="copia(this);">&#xe0a1;</span> <span onclick="copia(this);">&#xe0a2;</span> <span onclick="copia(this);">&#xe0a3;</span> <span onclick="copia(this);">&#xe0c0;</span> <span onclick="copia(this);">&#xe0c1;</span> <span onclick="copia(this);">&#xe0c2;</span> <span onclick="copia(this);">&#xe0c3;</span> <span onclick="copia(this);">&#xe100;</span> <span onclick="copia(this);">&#xe101;</span> <span onclick="copia(this);">&#xe102;</span> <span onclick="copia(this);">&#xe103;</span> <span onclick="copia(this);">&#xe104;</span> <span onclick="copia(this);">&#xe105;</span> <span onclick="copia(this);">&#xe106;</span> <span onclick="copia(this);">&#xe107;</span> <span onclick="copia(this);">&#xe108;</span> <span onclick="copia(this);">&#xe10e;</span> <span onclick="copia(this);">&#xe10f;</span> <span onclick="copia(this);">&#xe110;</span> <span onclick="copia(this);">&#xe111;</span> <span onclick="copia(this);">&#xe112;</span> <span onclick="copia(this);">&#xe120;</span> <span onclick="copia(this);">&#xe121;</span> <span onclick="copia(this);">&#xe122;</span> <span onclick="copia(this);">&#xe123;</span> <span onclick="copia(this);">&#xe124;</span> <span onclick="copia(this);">&#xe130;</span> <span onclick="copia(this);">&#xe140;</span> <span onclick="copia(this);">&#xe141;</span> <span onclick="copia(this);">&#xe142;</span> <span onclick="copia(this);">&#xe143;</span> <span onclick="copia(this);">&#xe144;</span> <span onclick="copia(this);">&#xe145;</span> <span onclick="copia(this);">&#xe148;</span> <span onclick="copia(this);">&#xe149;</span> <span onclick="copia(this);">&#xe14a;</span> <span onclick="copia(this);">&#xe14b;</span> <span onclick="copia(this);">&#xe14c;</span> <span onclick="copia(this);">&#xe14d;</span> <span onclick="copia(this);">&#xe160;</span> <span onclick="copia(this);">&#xe161;</span> <span onclick="copia(this);">&#xe162;</span> <span onclick="copia(this);">&#xe163;</span> <span onclick="copia(this);">&#xe164;</span> <span onclick="copia(this);">&#xe165;</span> <span onclick="copia(this);">&#xe166;</span> <span onclick="copia(this);">&#xe167;</span> <span onclick="copia(this);">&#xe168;</span> <span onclick="copia(this);">&#xe169;</span> <span onclick="copia(this);">&#xe16a;</span> <span onclick="copia(this);">&#xe16f;</span> <span onclick="copia(this);">&#xe200;</span> <span onclick="copia(this);">&#xe201;</span> <span onclick="copia(this);">&#xe202;</span> <span onclick="copia(this);">&#xe203;</span> <span onclick="copia(this);">&#xe204;</span> <span onclick="copia(this);">&#xe205;</span> <span onclick="copia(this);">&#xe206;</span> <span onclick="copia(this);">&#xe207;</span> <span onclick="copia(this);">&#xe208;</span> <span onclick="copia(this);">&#xe240;</span> <span onclick="copia(this);">&#xe241;</span> <span onclick="copia(this);">&#xe242;</span> <span onclick="copia(this);">&#xe243;</span> <span onclick="copia(this);">&#xe244;</span> <span onclick="copia(this);">&#xe245;</span> <span onclick="copia(this);">&#xe300;</span> <span onclick="copia(this);">&#xe301;</span> <span onclick="copia(this);">&#xe302;</span> <span onclick="copia(this);">&#xe303;</span> <span onclick="copia(this);">&#xe304;</span> <span onclick="copia(this);">&#xe305;</span> <span onclick="copia(this);">&#xe306;</span> <span onclick="copia(this);">&#xe307;</span> <span onclick="copia(this);">&#xe308;</span> <span onclick="copia(this);">&#xe309;</span> <span onclick="copia(this);">&#xe30a;</span> <span onclick="copia(this);">&#xe30b;</span> <span onclick="copia(this);">&#xe30c;</span> <span onclick="copia(this);">&#xe30d;</span> <span onclick="copia(this);">&#xe30e;</span> <span onclick="copia(this);">&#xe30f;</span> <span onclick="copia(this);">&#xe310;</span> <span onclick="copia(this);">&#xe311;</span> <span onclick="copia(this);">&#xe312;</span> <span onclick="copia(this);">&#xe320;</span> <span onclick="copia(this);">&#xe340;</span> <span onclick="copia(this);">&#xe3c0;</span> <span onclick="copia(this);">&#xe3c1;</span> <span onclick="copia(this);">&#xe3c2;</span> <span onclick="copia(this);">&#xe3c3;</span> <span onclick="copia(this);">&#xe3c4;</span> <span onclick="copia(this);">&#xe3c5;</span> <span onclick="copia(this);">&#xe3c6;</span> <span onclick="copia(this);">&#xe3c7;</span> <span onclick="copia(this);">&#xe3cf;</span> <span onclick="copia(this);">&#xe3fd;</span> <span onclick="copia(this);">&#xe3fe;</span></p>
+			<p id="avviso"></p>
+
+			<h3 id="unicode">UNICODE</h3>
+			<p>Passare con il puntatore del mouse su un carattere per vedere l'animazione relativa alla variabilità (tondo e corsivo).</p>
+			<p class="unicode"><span>!</span> <span>"</span> <span>#</span> <span>$</span> <span>%</span> <span>&</span> <span>'</span> <span>(</span> <span>)</span> <span>*</span> <span>+</span> <span>,</span> <span>-</span> <span>.</span> <span>/</span> <span>0</span> <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>:</span> <span>;</span> <span><</span> <span>=</span> <span>></span> <span>?</span> <span>@</span> <span>A</span> <span>B</span> <span>C</span> <span>D</span> <span>E</span> <span>F</span> <span>G</span> <span>H</span> <span>I</span> <span>J</span> <span>K</span> <span>L</span> <span>M</span> <span>N</span> <span>O</span> <span>P</span> <span>Q</span> <span>R</span> <span>S</span> <span>T</span> <span>U</span> <span>V</span> <span>W</span> <span>X</span> <span>Y</span> <span>Z</span> <span>[</span> <span>\</span> <span>]</span> <span>^</span> <span>_</span> <span>`</span> <span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> <span>f</span> <span>g</span> <span>h</span> <span>i</span> <span>j</span> <span>k</span> <span>l</span> <span>m</span> <span>n</span> <span>o</span> <span>p</span> <span>q</span> <span>r</span> <span>s</span> <span>t</span> <span>u</span> <span>v</span> <span>w</span> <span>x</span> <span>y</span> <span>z</span> <span>{</span> <span>|</span> <span>}</span> <span>~</span> <span>¡</span> <span>¢</span> <span>£</span> <span>¤</span> <span>¥</span> <span>¦</span> <span>§</span> <span>¨</span> <span>©</span> <span>ª</span> <span>«</span> <span>¬</span> <span>®</span> <span>¯</span> <span>°</span> <span>±</span> <span>²</span> <span>³</span> <span>´</span> <span>µ</span> <span>¶</span> <span>·</span> <span>¸</span> <span>¹</span> <span>º</span> <span>»</span> <span>¼</span> <span>½</span> <span>¾</span> <span>¿</span> <span>À</span> <span>Á</span> <span>Â</span> <span>Ã</span> <span>Ä</span> <span>Å</span> <span>Æ</span> <span>Ç</span> <span>È</span> <span>É</span> <span>Ê</span> <span>Ë</span> <span>Ì</span> <span>Í</span> <span>Î</span> <span>Ï</span> <span>Ð</span> <span>Ñ</span> <span>Ò</span> <span>Ó</span> <span>Ô</span> <span>Õ</span> <span>Ö</span> <span>×</span> <span>Ø</span> <span>Ù</span> <span>Ú</span> <span>Û</span> <span>Ü</span> <span>Ý</span> <span>Þ</span> <span>ß</span> <span>à</span> <span>á</span> <span>â</span> <span>ã</span> <span>ä</span> <span>å</span> <span>æ</span> <span>ç</span> <span>è</span> <span>é</span> <span>ê</span> <span>ë</span> <span>ì</span> <span>í</span> <span>î</span> <span>ï</span> <span>ð</span> <span>ñ</span> <span>ò</span> <span>ó</span> <span>ô</span> <span>õ</span> <span>ö</span> <span>÷</span> <span>ø</span> <span>ù</span> <span>ú</span> <span>û</span> <span>ü</span> <span>ý</span> <span>þ</span> <span>ÿ</span> <span>Ā</span> <span>ā</span> <span>Ă</span> <span>ă</span> <span>Ą</span> <span>ą</span> <span>Ć</span> <span>ć</span> <span>Ĉ</span> <span>ĉ</span> <span>Ċ</span> <span>ċ</span> <span>Č</span> <span>č</span> <span>Ď</span> <span>ď</span> <span>Đ</span> <span>đ</span> <span>Ē</span> <span>ē</span> <span>Ĕ</span> <span>ĕ</span> <span>Ė</span> <span>ė</span> <span>Ę</span> <span>ę</span> <span>Ě</span> <span>ě</span> <span>Ĝ</span> <span>ĝ</span> <span>Ğ</span> <span>ğ</span> <span>Ġ</span> <span>ġ</span> <span>Ģ</span> <span>ģ</span> <span>Ĥ</span> <span>ĥ</span> <span>Ħ</span> <span>ħ</span> <span>Ĩ</span> <span>ĩ</span> <span>Ī</span> <span>ī</span> <span>Ĭ</span> <span>ĭ</span> <span>Į</span> <span>į</span> <span>İ</span> <span>ı</span> <span>Ĳ</span> <span>ĳ</span> <span>Ĵ</span> <span>ĵ</span> <span>Ķ</span> <span>ķ</span> <span>ĸ</span> <span>Ĺ</span> <span>ĺ</span> <span>Ļ</span> <span>ļ</span> <span>Ľ</span> <span>ľ</span> <span>Ŀ</span> <span>ŀ</span> <span>Ł</span> <span>ł</span> <span>Ń</span> <span>ń</span> <span>Ņ</span> <span>ņ</span> <span>Ň</span> <span>ň</span> <span>ŉ</span> <span>Ŋ</span> <span>ŋ</span> <span>Ō</span> <span>ō</span> <span>Ŏ</span> <span>ŏ</span> <span>Ő</span> <span>ő</span> <span>Œ</span> <span>œ</span> <span>Ŕ</span> <span>ŕ</span> <span>Ŗ</span> <span>ŗ</span> <span>Ř</span> <span>ř</span> <span>Ś</span> <span>ś</span> <span>Ŝ</span> <span>ŝ</span> <span>Ş</span> <span>ş</span> <span>Š</span> <span>š</span> <span>Ţ</span> <span>ţ</span> <span>Ť</span> <span>ť</span> <span>Ŧ</span> <span>ŧ</span> <span>Ũ</span> <span>ũ</span> <span>Ū</span> <span>ū</span> <span>Ŭ</span> <span>ŭ</span> <span>Ů</span> <span>ů</span> <span>Ű</span> <span>ű</span> <span>Ų</span> <span>ų</span> <span>Ŵ</span> <span>ŵ</span> <span>Ŷ</span> <span>ŷ</span> <span>Ÿ</span> <span>Ź</span> <span>ź</span> <span>Ż</span> <span>ż</span> <span>Ž</span> <span>ž</span> <span>ſ</span> <span>Ǝ</span> <span>Ə</span> <span>ƒ</span> <span>Ɲ</span> <span>ƞ</span> <span>Ǆ</span> <span>ǅ</span> <span>ǆ</span> <span>Ǉ</span> <span>ǈ</span> <span>ǉ</span> <span>Ǌ</span> <span>ǋ</span> <span>ǌ</span> <span>Ǎ</span> <span>ǎ</span> <span>Ǐ</span> <span>ǐ</span> <span>Ǒ</span> <span>ǒ</span> <span>Ǔ</span> <span>ǔ</span> <span>Ǖ</span> <span>ǖ</span> <span>Ǘ</span> <span>ǘ</span> <span>Ǚ</span> <span>ǚ</span> <span>Ǜ</span> <span>ǜ</span> <span>ǝ</span> <span>Ǟ</span> <span>ǟ</span> <span>Ǡ</span> <span>ǡ</span> <span>Ǣ</span> <span>ǣ</span> <span>Ǧ</span> <span>ǧ</span> <span>Ǩ</span> <span>ǩ</span> <span>Ǫ</span> <span>ǫ</span> <span>Ǭ</span> <span>ǭ</span> <span>ǰ</span> <span>Ǳ</span> <span>ǲ</span> <span>ǳ</span> <span>Ǵ</span> <span>ǵ</span> <span>Ǹ</span> <span>ǹ</span> <span>Ǻ</span> <span>ǻ</span> <span>Ǽ</span> <span>ǽ</span> <span>Ǿ</span> <span>ǿ</span> <span>Ȁ</span> <span>ȁ</span> <span>Ȃ</span> <span>ȃ</span> <span>Ȅ</span> <span>ȅ</span> <span>Ȇ</span> <span>ȇ</span> <span>Ȉ</span> <span>ȉ</span> <span>Ȋ</span> <span>ȋ</span> <span>Ȍ</span> <span>ȍ</span> <span>Ȏ</span> <span>ȏ</span> <span>Ȑ</span> <span>ȑ</span> <span>Ȓ</span> <span>ȓ</span> <span>Ȕ</span> <span>ȕ</span> <span>Ȗ</span> <span>ȗ</span> <span>Ș</span> <span>ș</span> <span>Ț</span> <span>ț</span> <span>Ȟ</span> <span>ȟ</span> <span>Ȧ</span> <span>ȧ</span> <span>Ȩ</span> <span>ȩ</span> <span>Ȫ</span> <span>ȫ</span> <span>Ȭ</span> <span>ȭ</span> <span>Ȯ</span> <span>ȯ</span> <span>Ȱ</span> <span>ȱ</span> <span>Ȳ</span> <span>ȳ</span> <span>ȷ</span> <span>Ʌ</span> <span>ə</span> <span>ɜ</span> <span>ɲ</span> <span>π</span> <span>฿</span> <span>Ḁ</span> <span>ḁ</span> <span>Ḃ</span> <span>ḃ</span> <span>Ḅ</span> <span>ḅ</span> <span>Ḇ</span> <span>ḇ</span> <span>Ḉ</span> <span>ḉ</span> <span>Ḋ</span> <span>ḋ</span> <span>Ḍ</span> <span>ḍ</span> <span>Ḏ</span> <span>ḏ</span> <span>Ḑ</span> <span>ḑ</span> <span>Ḓ</span> <span>ḓ</span> <span>Ḕ</span> <span>ḕ</span> <span>Ḗ</span> <span>ḗ</span> <span>Ḙ</span> <span>ḙ</span> <span>Ḛ</span> <span>ḛ</span> <span>Ḝ</span> <span>ḝ</span> <span>Ḟ</span> <span>ḟ</span> <span>Ḡ</span> <span>ḡ</span> <span>Ḣ</span> <span>ḣ</span> <span>Ḥ</span> <span>ḥ</span> <span>Ḧ</span> <span>ḧ</span> <span>Ḩ</span> <span>ḩ</span> <span>Ḫ</span> <span>ḫ</span> <span>Ḭ</span> <span>ḭ</span> <span>Ḯ</span> <span>ḯ</span> <span>Ḱ</span> <span>ḱ</span> <span>Ḳ</span> <span>ḳ</span> <span>Ḵ</span> <span>ḵ</span> <span>Ḷ</span> <span>ḷ</span> <span>Ḹ</span> <span>ḹ</span> <span>Ḻ</span> <span>ḻ</span> <span>Ḽ</span> <span>ḽ</span> <span>Ḿ</span> <span>ḿ</span> <span>Ṁ</span> <span>ṁ</span> <span>Ṃ</span> <span>ṃ</span> <span>Ṅ</span> <span>ṅ</span> <span>Ṇ</span> <span>ṇ</span> <span>Ṉ</span> <span>ṉ</span> <span>Ṋ</span> <span>ṋ</span> <span>Ṍ</span> <span>ṍ</span> <span>Ṏ</span> <span>ṏ</span> <span>Ṑ</span> <span>ṑ</span> <span>Ṓ</span> <span>ṓ</span> <span>Ṕ</span> <span>ṕ</span> <span>Ṗ</span> <span>ṗ</span> <span>Ṙ</span> <span>ṙ</span> <span>Ṛ</span> <span>ṛ</span> <span>Ṝ</span> <span>ṝ</span> <span>Ṟ</span> <span>ṟ</span> <span>Ṡ</span> <span>ṡ</span> <span>Ṣ</span> <span>ṣ</span> <span>Ṥ</span> <span>ṥ</span> <span>Ṧ</span> <span>ṧ</span> <span>Ṩ</span> <span>ṩ</span> <span>Ṫ</span> <span>ṫ</span> <span>Ṭ</span> <span>ṭ</span> <span>Ṯ</span> <span>ṯ</span> <span>Ṱ</span> <span>ṱ</span> <span>Ṳ</span> <span>ṳ</span> <span>Ṵ</span> <span>ṵ</span> <span>Ṷ</span> <span>ṷ</span> <span>Ṹ</span> <span>ṹ</span> <span>Ṻ</span> <span>ṻ</span> <span>Ṽ</span> <span>ṽ</span> <span>Ṿ</span> <span>ṿ</span> <span>Ẁ</span> <span>ẁ</span> <span>Ẃ</span> <span>ẃ</span> <span>Ẅ</span> <span>ẅ</span> <span>Ẇ</span> <span>ẇ</span> <span>Ẉ</span> <span>ẉ</span> <span>Ẋ</span> <span>ẋ</span> <span>Ẍ</span> <span>ẍ</span> <span>Ẏ</span> <span>ẏ</span> <span>Ẑ</span> <span>ẑ</span> <span>Ẓ</span> <span>ẓ</span> <span>Ẕ</span> <span>ẕ</span> <span>ẖ</span> <span>ẗ</span> <span>ẘ</span> <span>ẙ</span> <span>ẞ</span> <span>Ạ</span> <span>ạ</span> <span>Ấ</span> <span>ấ</span> <span>Ầ</span> <span>ầ</span> <span>Ẫ</span> <span>ẫ</span> <span>Ậ</span> <span>ậ</span> <span>Ắ</span> <span>ắ</span> <span>Ằ</span> <span>ằ</span> <span>Ẵ</span> <span>ẵ</span> <span>Ặ</span> <span>ặ</span> <span>Ẹ</span> <span>ẹ</span> <span>Ẽ</span> <span>ẽ</span> <span>Ế</span> <span>ế</span> <span>Ề</span> <span>ề</span> <span>Ễ</span> <span>ễ</span> <span>Ệ</span> <span>ệ</span> <span>Ị</span> <span>ị</span> <span>Ọ</span> <span>ọ</span> <span>Ố</span> <span>ố</span> <span>Ồ</span> <span>ồ</span> <span>Ỗ</span> <span>ỗ</span> <span>Ộ</span> <span>ộ</span> <span>Ụ</span> <span>ụ</span> <span>Ỳ</span> <span>ỳ</span> <span>Ỵ</span> <span>ỵ</span> <span>Ỹ</span> <span>ỹ</span> <span>‐</span> <span>‑</span> <span>‒</span> <span>–</span> <span>—</span> <span>‖</span> <span>‘</span> <span>’</span> <span>‚</span> <span>“</span> <span>”</span> <span>„</span> <span>†</span> <span>‡</span> <span>•</span> <span>…</span> <span>‧</span> <span>‰</span> <span>‱</span> <span>′</span> <span>″</span> <span>‴</span> <span>‹</span> <span>›</span> <span>⁂</span> <span>⁄</span> <span>⁋</span> <span>⁰</span> <span>⁴</span> <span>⁵</span> <span>⁶</span> <span>⁷</span> <span>⁸</span> <span>⁹</span> <span>₀</span> <span>₁</span> <span>₂</span> <span>₃</span> <span>₄</span> <span>₅</span> <span>₆</span> <span>₇</span> <span>₈</span> <span>₉</span> <span>₦</span> <span>₪</span> <span>€</span> <span>₲</span> <span>₴</span> <span>₹</span> <span>₽</span> <span>™</span> <span>Ω</span> <span>Å</span> <span>⅐</span> <span>⅑</span> <span>⅒</span> <span>⅓</span> <span>⅔</span> <span>⅕</span> <span>⅖</span> <span>⅗</span> <span>⅘</span> <span>⅙</span> <span>⅚</span> <span>⅛</span> <span>⅜</span> <span>⅝</span> <span>⅞</span> <span>⅟</span> <span>Ⅰ</span> <span>Ⅱ</span> <span>Ⅲ</span> <span>Ⅳ</span> <span>Ⅴ</span> <span>Ⅵ</span> <span>Ⅶ</span> <span>Ⅷ</span> <span>Ⅸ</span> <span>Ⅹ</span> <span>Ⅺ</span> <span>Ⅻ</span> <span>Ⅼ</span> <span>Ⅽ</span> <span>Ⅾ</span> <span>Ⅿ</span> <span>↉</span> <span>←</span> <span>↑</span> <span>→</span> <span>↓</span> <span>↔</span> <span>↕</span> <span>↖</span> <span>↗</span> <span>↘</span> <span>↙</span> <span>∂</span> <span>∆</span> <span>∇</span> <span>∏</span> <span>∑</span> <span>−</span> <span>∓</span> <span>∕</span> <span>∙</span> <span>√</span> <span>∞</span> <span>∫</span> <span>≈</span> <span>≠</span> <span>≡</span> <span>≤</span> <span>≥</span> <span>■</span> <span>□</span> <span>▪</span> <span>▫</span> <span>▲</span> <span>△</span> <span>▶</span> <span>▷</span> <span>▼</span> <span>▽</span> <span>◀</span> <span>◁</span> <span>◆</span> <span>◇</span> <span>◊</span> <span>○</span> <span>●</span> <span>◦</span> <span>◻</span> <span>◼</span> <span>☙</span> <span>❡</span> <span>❦</span> <span>❧</span> <span>➊</span> <span>➋</span> <span>➌</span> <span>➍</span> <span>➎</span> <span>➏</span> <span>➐</span> <span>➑</span> <span>➒</span> <span>➓</span> <span>⟦</span> <span>⟧</span> <span>⟨</span> <span>⟩</span> <span>⬛</span> <span>⬜</span> <span>⸮</span> <span>Ɜ</span> <span>ﬀ</span> <span>ﬁ</span> <span>ﬂ</span> <span>ﬃ</span> <span>ﬄ</span> <span>🄌</span></p>
+
+			<h4>Note</h4>
+			<p class="nota" id="ref-1"><a class="refn" href="#nt-1">1]</a> <i><a href="https://accademiadellacrusca.it/it/consulenza/sul-genere-di-font/984" target="_blank" class="ico"><span>Sul genere di font</span>&#xe080;</a></i>, Accademia della Crusca.</p>
+			<p class="nota" id="ref-2"><a class="refn" href="#nt-2">2]</a> <i><a href="https://github.com/ecm4u/Titillium" target="_blank" class="ico"><span>Titillium</span>&#xe080;</a></i>, Github.</p>
+			<p class="nota" id="ref-3"><a class="refn" href="#nt-3">3]</a> <i><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank" class="ico"><span>Titillium Web</span>&#xe080;</a></i>, Google Fonts.</p>
+			<p class="nota" id="ref-4"><a class="refn" href="#nt-4">4]</a> Cfr. <i><a href="http://nta.accademiadiurbino.it/titillium/" target="_blank" class="ico"><span>Titillium</span>&#xe080;</a></i>, Accademia di Belle Arti di Urbino.</p>
+			<p class="nota" id="ref-5"><a class="refn" href="#nt-5">5]</a> G. Sinni, <i><a href="https://medium.com/designers-italia/un-carattere-per-l-identit%C3%A0-italiana-c704f3e4791d" target="_blank" class="ico"><span>Un carattere per l’identità italiana</span>&#xe080;</a></i>, «Designers Italia», 18 gen. 2016.</p>
+			<p class="nota" id="ref-6"><a class="refn" href="#nt-6">6]</a> Cfr. <i><a href="https://it.wikipedia.org/wiki/Le_12_fatiche_di_Asterix" target="_blank" class="ico"><span>Le 12 fatiche di Asterix</span>&#xe080;</a></i>, Wikipedia.</p>
+		</article>
+	</section>
+	<footer>
+		<div>
+			<p>&copy; 2023-2024 Michele Casanova
+		</div>
+	</footer>
+
+<script>
+	var axis = { "wght": 400, "ital": 0 }
+
+	function aggiorna2() {
+		let testi = document.querySelectorAll(".testo");
+		if (!testi) {
+			console.error("Elemento .testo non presente");
+			return;
+		}
+
+		let first = true;
+		let settings = "";
+		
+		for (let ax in axis) {
+			if (!first) {
+				settings += ", "
+			}
+			settings += "'" + ax + "' " + axis[ax];
+			first = false;
+		}
+		
+		for (let tt of testi) {
+			tt.style.fontVariationSettings = settings;
+		}
+
+		document.querySelector("#dati").innerHTML = settings;
+		
+	}
+	
+	function aggiorna(a, b) {
+		axis[a] = b;
+		aggiorna2();
+	}
+							
+	function reset() {
+		let range = null;
+
+		axis["wght"] = 400;
+		document.querySelector("#range_wght").value = 400;
+
+		axis["ital"] = 0;
+		document.querySelector("#range_ital").value = 0;
+
+		aggiorna2();
+	}
+	reset();
+
+	function copia(w) {
+		a = w.innerHTML;
+		c = a.charCodeAt(0).toString(16).toUpperCase() + '; ' + a;
+		navigator.clipboard.writeText('&#x' + c);
+		b = document.querySelector("#avviso");
+		b.innerHTML = 'Carattere &amp;#x' + c + ' copiato negli appunti';
+		b.style.display = 'block';
+		setTimeout(() => { b.style.display = 'none'; }, 3000);
+	}
+</script>
+<body>
+</html>
